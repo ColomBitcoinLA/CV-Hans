@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hans Arango | CV Profesional</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!-- Background Effects -->
+        <div class="bg-grid" aria-hidden="true"></div>
+        <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+        <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+        <!-- Control Panel -->
+        <div class="control-panel" role="toolbar" aria-label="Controles del CV">
+            <!-- Download PDF -->
+            <button class="control-btn" id="downloadBtn" aria-label="Descargar CV en PDF">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span class="control-tooltip" data-i18n="download">Descargar PDF</span>
+            </button>
+
+            <!-- Theme Toggle -->
+            <button class="control-btn" id="themeBtn" aria-label="Cambiar tema">
+                <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <span class="control-tooltip" data-i18n="theme">Cambiar tema</span>
+            </button>
+
+            <!-- Language Toggle -->
+            <button class="control-btn" id="langBtn" aria-label="Cambiar idioma" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span class="control-tooltip" data-i18n="language">Idioma</span>
+                <div class="lang-dropdown" id="langDropdown" role="menu">
+                    <div class="lang-option active" data-lang="es" role="menuitem" tabindex="0">
+                        <span class="lang-flag">ES</span>
+                        <span>Espanol</span>
+                    </div>
+                    <div class="lang-option" data-lang="en" role="menuitem" tabindex="0">
+                        <span class="lang-flag">EN</span>
+                        <span>English</span>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <!-- Navigation Dots -->
+        <nav class="nav-float" aria-label="Navegacion de secciones">
+            <button class="nav-dot active" data-section="hero" aria-label="Ir a inicio"></button>
+            <button class="nav-dot" data-section="services" aria-label="Ir a servicios"></button>
+            <button class="nav-dot" data-section="experience" aria-label="Ir a experiencia"></button>
+            <button class="nav-dot" data-section="skills" aria-label="Ir a habilidades"></button>
+            <button class="nav-dot" data-section="contact" aria-label="Ir a contacto"></button>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-badge" data-i18n="available">Disponible para nuevos proyectos</div>
+                <h1 class="hero-title">
+                    Hans Steven <span>Arango Ortiz</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Estratega Digital & Arquitecto de Soluciones Empresariales, profesional multidisciplinario con experiencia en creación, escalamiento y optimización de empresas mediante branding, marketing digital, desarrollo tecnológico, automatización, data e inteligencia artificial..
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label" data-i18n="stat_years">Anos de Experiencia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label" data-i18n="stat_projects">Proyectos Completados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label" data-i18n="stat_areas">Areas de Especializacion</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+3x</div>
+                        <div class="stat-label" data-i18n="stat_sales">Incremento en Ventas</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#services" class="btn-primary" data-i18n="btn_services">
+                        Ver Servicios
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn-secondary" data-i18n="btn_contact">Contactar</a>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="section-header">
+                <span class="section-tag">Servicios de Colombit</span>
+                <h2 class="section-title" data-i18n="services_title">Servicios Integrales para Empresas</h2>
+                <p class="section-desc" data-i18n="services_desc">Soluciones completas que transforman tu negocio desde la estrategia hasta la implementacion tecnologica.</p>
+            </div>
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="exp_tag">Trayectoria</span>
+                <h2 class="section-title" data-i18n="exp_title">Experiencia Profesional</h2>
+                <p class="section-desc" data-i18n="exp_desc">Una decada transformando negocios y liderando proyectos innovadores.</p>
+            </div>
+            <div class="timeline" id="timeline">
+                <!-- Timeline will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="skills_tag">Competencias</span>
+                <h2 class="section-title" data-i18n="skills_title">Habilidades Tecnicas</h2>
+                <p class="section-desc" data-i18n="skills_desc">Experto en multiples areas con formacion continua en tecnologias emergentes.</p>
+            </div>
+            <div class="skills-container">
+                <div class="skills-grid" id="skillsGrid">
+                    <!-- Skills will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="edu_tag">Formacion</span>
+                <h2 class="section-title" data-i18n="edu_title">Educacion y Certificaciones</h2>
+            </div>
+            <div class="education-grid" id="educationGrid">
+                <!-- Education will be populated by JS -->
+            </div>
+
+            <!-- Languages -->
+            <div style="max-width: 600px; margin: 60px auto 0; text-align: center;">
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 16px;" data-i18n="languages_title">Idiomas</h3>
+                <div class="lang-tags">
+                    <div class="lang-tag" data-i18n-lang="es">Espanol <span data-i18n="lang_native">Nativo</span></div>
+                    <div class="lang-tag" data-i18n-lang="en">Ingles <span data-i18n="lang_basic">Básico</span></div>
+                    <div class="lang-tag" data-i18n-lang="it">Italiano <span data-i18n="lang_basic">Basico</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transit Section Toggle -->
+        <button class="transit-toggle" id="transitToggle" aria-expanded="false" aria-controls="transitSection">
+            <span data-i18n="transit_toggle">Ver experiencia en Tramites de Transito</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+
+        <!-- Transit Section -->
+        <section id="transitSection" class="transit-section">
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-tag">Transito Cali</span>
+                    <h2 class="section-title" data-i18n="transit_title">Servicios de Transito</h2>
+                    <p class="section-desc" data-i18n="transit_desc">Experiencia especializada en gestion de tramites vehiculares y asesoria legal.</p>
+                </div>
+                <div class="transit-grid" id="transitGrid">
+                    <!-- Transit cards will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="contact_tag">Contacto</span>
+                <h2 class="section-title" data-i18n="contact_title">Conectemos</h2>
+                <p class="section-desc" data-i18n="contact_desc">Listo para transformar tu negocio. Contactame para discutir como puedo aportar valor a tu empresa.</p>
+            </div>
+            <div class="contact-grid">
+                <a href="tel:+573126800807" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="contact-label" data-i18n="phone_label">Telefono</div>
+                        <div class="contact-value">+57 312 680 0807</div>
+                    </div>
+                </a>
+
+                <a href="mailto:colombitcoinla@gmail.com" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="contact-label" data-i18n="email_label">Email</div>
+                        <div class="contact-value">colombitcoinla@gmail.com</div>
+                    </div>
+                </a>
+
+                <a href="https://colombitcoin.co" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="contact-label" data-i18n="website_label">Website</div>
+                        <div class="contact-value">colombitcoin.co</div>
+                    </div>
+                </a>
+
+                <div class="contact-item" style="cursor: default;">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="contact-label" data-i18n="location_label">Ubicacion</div>
+                        <div class="contact-value" data-i18n="location_value">Cali, Colombia</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div style="max-width: 900px; margin: 60px auto 0;">
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 24px; text-align: center;" data-i18n="references_title">Referencias Profesionales</h3>
+                <div id="referencesGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <!-- References will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Hans Steven Arango | Colombit Services</p>
+            <p style="margin-top: 8px; font-size: 0.75rem;" data-i18n="footer_note">CV optimizado para reclutadores internacionales. disenado para alto impacto visual.</p>
+        </footer>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
