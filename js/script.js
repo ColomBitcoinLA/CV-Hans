@@ -1,4 +1,3 @@
-
 // ============================================
 // TRANSLATIONS DATA
 // ============================================
@@ -8,53 +7,53 @@ const translations = {
         theme: "Cambiar tema",
         language: "Idioma",
         available: "Disponible para nuevos proyectos",
-        hero_subtitle: "Estratega Digital & Arquitecto de Soluciones Empresariales, profesional multidisciplinario con experiencia en creación, escalamiento y optimización de empresas mediante branding, marketing digital, desarrollo tecnológico, automatización, data e inteligencia artificial..",
-        stat_years: "Anos de Experiencia",
+        hero_subtitle: "Estratega Digital & Arquitecto de Soluciones Empresariales, profesional multidisciplinario con experiencia en creación, escalamiento y optimización de empresas mediante branding, marketing digital, desarrollo tecnológico, automatización, data e inteligencia artificial.",
+        stat_years: "Años de Experiencia",
         stat_projects: "Proyectos Completados",
-        stat_areas: "Areas de Especializacion",
+        stat_areas: "Áreas de Especialización",
         stat_sales: "Incremento en Ventas",
         btn_services: "Ver Servicios",
         btn_contact: "Contactar",
         services_title: "Servicios Integrales para Empresas",
-        services_desc: "Soluciones completas que transforman tu negocio desde la estrategia hasta la implementacion tecnologica.",
+        services_desc: "Soluciones completas que transforman tu negocio desde la estrategia hasta la implementación tecnológica.",
         exp_tag: "Trayectoria",
         exp_title: "Experiencia Profesional",
-        exp_desc: "Una decada transformando negocios y liderando proyectos innovadores.",
+        exp_desc: "Una década transformando negocios y liderando proyectos innovadores.",
         skills_tag: "Competencias",
-        skills_title: "Habilidades Tecnicas",
-        skills_desc: "Experto en multiples areas con formacion continua en tecnologias emergentes.",
-        edu_tag: "Formacion",
-        edu_title: "Educacion y Certificaciones",
+        skills_title: "Habilidades Técnicas",
+        skills_desc: "Experto en múltiples áreas con formación continua en tecnologías emergentes.",
+        edu_tag: "Formación",
+        edu_title: "Educación y Certificaciones",
         languages_title: "Idiomas",
         lang_native: "Nativo",
         lang_intermediate: "Intermedio",
-        lang_basic: "Basico",
-        transit_toggle: "Ver experiencia en Tramites de Transito",
-        transit_toggle_hide: "Ocultar experiencia en Tramites",
-        transit_title: "Servicios de Transito",
-        transit_desc: "Experiencia especializada en gestion de tramites vehiculares y asesoria legal.",
+        lang_basic: "Básico",
+        transit_toggle: "Ver experiencia en Trámites de Tránsito",
+        transit_toggle_hide: "Ocultar experiencia en Trámites",
+        transit_title: "Servicios de Tránsito",
+        transit_desc: "Experiencia especializada en gestión de trámites vehiculares y asesoría legal.",
         contact_tag: "Contacto",
         contact_title: "Conectemos",
-        contact_desc: "Listo para transformar tu negocio. Contactame para discutir como puedo aportar valor a tu empresa.",
-        phone_label: "Telefono",
+        contact_desc: "Listo para transformar tu negocio. Contáctame para discutir cómo puedo aportar valor a tu empresa.",
+        phone_label: "Teléfono",
         email_label: "Email",
         website_label: "Website",
-        location_label: "Ubicacion",
+        location_label: "Ubicación",
         location_value: "Cali, Colombia",
         references_title: "Referencias Profesionales",
-        footer_note: "CV optimizado para reclutadores internacionales. disenado para alto impacto visual.",
+        footer_note: "CV optimizado para reclutadores internacionales. Diseñado para alto impacto visual.",
         // Levels
         level_advanced: "Avanzado",
         level_intermediate: "Intermedio",
-        level_basic: "Basico",
-        level_learning: "En Formacion"
+        level_basic: "Básico",
+        level_learning: "En Formación"
     },
     en: {
         download: "Download PDF",
         theme: "Change theme",
         language: "Language",
         available: "Available for new projects",
-        hero_subtitle: "Full Stack Developer, Digital Marketing Specialist and Business Strategist with over 10 years of experience transforming companies through technology and innovation.",
+        hero_subtitle: "Digital Strategist & Business Solutions Architect, multidisciplinary professional with experience in creating, scaling and optimizing companies through branding, digital marketing, technological development, automation, data and artificial intelligence.",
         stat_years: "Years of Experience",
         stat_projects: "Projects Completed",
         stat_areas: "Areas of Expertise",
@@ -104,50 +103,50 @@ const servicesData = {
     es: [
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>`,
-            title: "Branding y Diseno de Marca",
-            desc: "Creacion de identidad visual completa: logotipos, paletas de color, tipografias y guias de marca que comunican la esencia de tu empresa.",
+            title: "Branding y Diseño de Marca",
+            desc: "Creación de identidad visual completa: logotipos, paletas de color, tipografías y guías de marca que comunican la esencia de tu empresa.",
             tags: ["Logo Design", "Brand Identity", "Visual Systems"]
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>`,
             title: "Estudios de Mercado & Modelo de Negocio",
-            desc: "Analisis profundo del mercado y de su cliente ideal (Bayer Persona), competencia y tendencias para informar decisiones estrategicas e identificar oportunidades de crecimiento.",
+            desc: "Análisis profundo del mercado y de su cliente ideal (Buyer Persona), competencia y tendencias para informar decisiones estratégicas e identificar oportunidades de crecimiento.",
             tags: ["Market Research", "Competitor Analysis", "Trends"]
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>`,
             title: "Redes Sociales y Plataformas",
-            desc: "Creacion, conexion y optimizacion de todas tus plataformas digitales para maximizar el alcance y engagement con tu audiencia.",
+            desc: "Creación, conexión y optimización de todas tus plataformas digitales para maximizar el alcance y engagement con tu audiencia.",
             tags: ["Social Media", "Community", "Analytics"]
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>`,
             title: "Contenido Digital Multi-formato",
-            desc: "Produccion de contenido en todos los formatos: imagenes, videos, podcasts, reels, stories. Adaptado para cada plataforma y audiencia.",
+            desc: "Producción de contenido en todos los formatos: imágenes, videos, podcasts, reels, stories. Adaptado para cada plataforma y audiencia.",
             tags: ["Video Production", "Podcast", "Reels"]
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>`,
-            title: "Campanas de Marketing Digital",
-            desc: "Estrategias organicas y de pago en Meta Ads, Google Ads y TikTok. Optimizacion continua para maximizar ROI y conversiones.",
+            title: "Campañas de Marketing Digital",
+            desc: "Estrategias orgánicas y de pago en Meta Ads, Google Ads y TikTok. Optimización continua para maximizar ROI y conversiones.",
             tags: ["Meta Ads", "Google Ads", "TikTok Ads"]
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>`,
             title: "Desarrollo de Software",
-            desc: "Landing pages, sitios web, aplicaciones de escritorio y moviles. Stack moderno: React, Node.js, y tecnologias blockchain.",
+            desc: "Landing pages, sitios web, aplicaciones de escritorio y móviles. Stack moderno: React, Node.js, y tecnologías blockchain.",
             tags: ["React", "Node.js", "Blockchain"]
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>`,
-            title: "Integracion de Inteligencia Artificial",
-            desc: "Implementacion de soluciones IA para automatizacion, analisis predictivo y mejora de procesos empresariales.",
+            title: "Integración de Inteligencia Artificial",
+            desc: "Implementación de soluciones IA para automatización, análisis predictivo y mejora de procesos empresariales.",
             tags: ["AI Integration", "Automation", "ML"]
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`,
             title: "Bases de Datos y Finanzas",
-            desc: "Estructuracion de datos, analisis financiero y creacion de dashboards para toma de decisiones basada en datos.",
+            desc: "Estructuración de datos, análisis financiero y creación de dashboards para toma de decisiones basada en datos.",
             tags: ["Data Analysis", "Excel", "Dashboards"]
         }
     ],
@@ -160,8 +159,8 @@ const servicesData = {
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>`,
-            title: "Market Research",
-            desc: "In-depth analysis of the market, competition and trends to inform strategic decisions and identify growth opportunities.",
+            title: "Market Research & Business Model",
+            desc: "In-depth analysis of the market and your ideal customer (Buyer Persona), competition and trends to inform strategic decisions and identify growth opportunities.",
             tags: ["Market Research", "Competitor Analysis", "Trends"]
         },
         {
@@ -209,45 +208,51 @@ const experienceData = {
             date: "2024 - Presente",
             title: "CEO y Fundador",
             company: "Colombit - Servicios Digitales Integrales",
-            desc: "Fundi y dirijo una empresa de servicios digitales que ofrece desarrollo web, marketing digital y consultoria tecnologica. He ayudado a multiples negocios a cuadruplicar sus ventas y expandir su presencia digital."
+            desc: "Fundé y dirijo una empresa de servicios digitales que ofrece desarrollo web, marketing digital y consultoría tecnológica. He ayudado a múltiples negocios a cuadruplicar sus ventas y expandir su presencia digital."
         },
         {
             date: "2024 - 2025",
             title: "Administrador y Data Analytics",
-            company: "Asesoria de Transito Julian Perez",
-            desc: "Cree sistema con base de datos, perfiles de clientes, cartera y cobro. Desarrolle campanas de marketing y redes sociales. Duplicamos las ventas en un ano implementando estrategias digitales y B2B."
+            company: "Asesoría de Tránsito Julián Pérez",
+            desc: "Creé sistema con base de datos, perfiles de clientes, cartera y cobro. Desarrollé campañas de marketing y redes sociales. Duplicamos las ventas en un año implementando estrategias digitales y B2B."
         },
         {
             date: "2020 - 2024",
             title: "Administrador y Desarrollador Marketing",
             company: "LAAOS Laboratorio",
-            desc: "Integre bases de datos, marketing digital y organice todas las redes y pagina web. Cuadruplicamos las ventas en 3 anos y quintuplicamos ventas por internet. Implemente estrategia B2B y B2C con resultados excepcionales."
+            desc: "Integré bases de datos, marketing digital y organicé todas las redes y página web. Cuadruplicamos las ventas en 3 años y quintuplicamos ventas por internet. Implementé estrategia B2B y B2C con resultados excepcionales."
         },
         {
             date: "2015 - 2020",
             title: "CEO y Fundador",
-            company: "Mi Movil Multiservicios",
-            desc: "Fundi empresa de telecomunicaciones con plataforma de recargas electronicas, planes de llamadas nacional e internacional, pines y pagos. Gestion completa de operaciones y desarrollo de negocio."
+            company: "Mi Móvil Multiservicios",
+            desc: "Fundé empresa de telecomunicaciones con plataforma de recargas electrónicas, planes de llamadas nacional e internacional, pines y pagos. Gestión completa de operaciones y desarrollo de negocio."
         },
         {
             date: "2013 - 2016",
-            title: "Administrador y Gestion de Cartera",
+            title: "Administrador y Gestión de Cartera",
             company: "Comunicaciones JP",
-            desc: "Cree sistema de base de datos, perfiles de clientes, gestion de cartera y cobro. Desarrolle campanas de marketing y redes sociales. Automatizacion de procesos de consultas y atencion al cliente."
+            desc: "Creé sistema de base de datos, perfiles de clientes, gestión de cartera y cobro. Desarrollé campañas de marketing y redes sociales. Automatización de procesos de consultas y atención al cliente."
         },
         {
             date: "2010 - 2013",
             title: "Vendedor y Freelance",
             company: "Comercializadora Latin Street",
-            desc: "Ventas de productos tecnologicos (celulares, accesorios, portatiles, PC) a empresas, negocios locales y personas naturales entre Colombia y Ecuador. Desarrollo de red comercial binacional."
+            desc: "Ventas de productos tecnológicos (celulares, accesorios, portátiles, PC) a empresas, negocios locales y personas naturales entre Colombia y Ecuador. Desarrollo de red comercial binacional."
         }
     ],
     en: [
         {
-            date: "2020 - Present",
+            date: "2024 - Present",
             title: "CEO and Founder",
             company: "Colombit - Comprehensive Digital Services",
             desc: "I founded and lead a digital services company offering web development, digital marketing and technology consulting. I have helped multiple businesses quadruple their sales and expand their digital presence."
+        },
+        {
+            date: "2024 - 2025",
+            title: "Administrator and Data Analytics",
+            company: "Julián Pérez Transit Advisory",
+            desc: "I created a system with database, client profiles, portfolio and collections. Developed marketing campaigns and social media. We doubled sales in one year by implementing digital and B2B strategies."
         },
         {
             date: "2020 - 2024",
@@ -256,15 +261,9 @@ const experienceData = {
             desc: "I integrated databases, digital marketing and organized all social media and website. We quadrupled sales in 3 years and increased internet sales fivefold. Implemented B2B and B2C strategy with exceptional results."
         },
         {
-            date: "2024 - 2025",
-            title: "Administrator and Data Analytics",
-            company: "Julian Perez Transit Advisory",
-            desc: "I created a system with database, client profiles, portfolio and collections. Developed marketing campaigns and social media. We doubled sales in one year by implementing digital and B2B strategies."
-        },
-        {
             date: "2015 - 2020",
             title: "CEO and Founder",
-            company: "Mi Movil Multiservicios",
+            company: "Mi Móvil Multiservicios",
             desc: "I founded a telecommunications company with electronic recharge platform, national and international call plans, pins and payments. Complete operations management and business development."
         },
         {
@@ -276,7 +275,7 @@ const experienceData = {
         {
             date: "2010 - 2013",
             title: "Sales and Freelance",
-            company: "Latin Street Marketing",
+            company: "Latin Street Trading",
             desc: "Sales of technology products (cell phones, accessories, laptops, PC) to companies, local businesses and individuals between Colombia and Ecuador. Development of binational commercial network."
         }
     ]
@@ -285,19 +284,19 @@ const experienceData = {
 const skillsData = {
     es: [
         {
-            category: "Desarrollo y Programacion",
+            category: "Desarrollo y Programación",
             skills: [
                 { name: "HTML / CSS / JavaScript", level: "Avanzado", width: 80 },
                 { name: "React / Node.js", level: "Intermedio", width: 40 },
-                { name: "Blockchain / Solidity / Rust", level: "En Formacion", width: 20 }
+                { name: "Blockchain / Solidity / Rust", level: "En Formación", width: 20 }
             ]
         },
         {
             category: "Marketing Digital",
             skills: [
                 { name: "Meta Ads / Google Ads", level: "Avanzado", width: 80 },
-                { name: "Creacion de Contenido", level: "Intermedio", width: 60 },
-                { name: "SEO / Analitica Web", level: "Intermedio", width: 50 }
+                { name: "Creación de Contenido", level: "Intermedio", width: 60 },
+                { name: "SEO / Analítica Web", level: "Intermedio", width: 50 }
             ]
         },
         {
@@ -305,15 +304,15 @@ const skillsData = {
             skills: [
                 { name: "Excel Avanzado / Macros", level: "Intermedio-Avanzado", width: 75 },
                 { name: "Trading / Crypto / Forex", level: "Avanzado", width: 90 },
-                { name: "Gestion de Cartera", level: "Intermedio", width: 60 }
+                { name: "Gestión de Cartera", level: "Intermedio", width: 60 }
             ]
         },
         {
-            category: "Diseno y Produccion",
+            category: "Diseño y Producción",
             skills: [
-                { name: "Diseno Grafico / Branding", level: "Avanzado", width: 80 },
-                { name: "Edicion de Video", level: "Intermedio", width: 60 },
-                { name: "Produccion Musical (FL, Protools)", level: "Basico", width: 40 }
+                { name: "Diseño Gráfico / Branding", level: "Avanzado", width: 80 },
+                { name: "Edición de Video", level: "Intermedio", width: 60 },
+                { name: "Producción Musical (FL, Protools)", level: "Básico", width: 40 }
             ]
         }
     ],
@@ -321,32 +320,32 @@ const skillsData = {
         {
             category: "Development and Programming",
             skills: [
-                { name: "HTML / CSS / JavaScript", level: "Advanced", width: 90 },
-                { name: "React / Node.js", level: "Intermediate-Advanced", width: 75 },
-                { name: "Blockchain / Solidity / Rust", level: "In Training", width: 45 }
+                { name: "HTML / CSS / JavaScript", level: "Advanced", width: 80 },
+                { name: "React / Node.js", level: "Intermediate", width: 40 },
+                { name: "Blockchain / Solidity / Rust", level: "In Training", width: 20 }
             ]
         },
         {
             category: "Digital Marketing",
             skills: [
-                { name: "Meta Ads / Google Ads", level: "Advanced", width: 85 },
-                { name: "Content Creation", level: "Advanced", width: 90 },
-                { name: "SEO / Web Analytics", level: "Intermediate", width: 70 }
+                { name: "Meta Ads / Google Ads", level: "Advanced", width: 80 },
+                { name: "Content Creation", level: "Intermediate", width: 60 },
+                { name: "SEO / Web Analytics", level: "Intermediate", width: 50 }
             ]
         },
         {
             category: "Business and Finance",
             skills: [
-                { name: "Advanced Excel / Macros", level: "Advanced", width: 95 },
-                { name: "Trading / Crypto / Forex", level: "Intermediate", width: 65 },
-                { name: "Portfolio Management", level: "Advanced", width: 85 }
+                { name: "Advanced Excel / Macros", level: "Intermediate-Advanced", width: 75 },
+                { name: "Trading / Crypto / Forex", level: "Advanced", width: 90 },
+                { name: "Portfolio Management", level: "Intermediate", width: 60 }
             ]
         },
         {
             category: "Design and Production",
             skills: [
                 { name: "Graphic Design / Branding", level: "Advanced", width: 80 },
-                { name: "Video Editing", level: "Intermediate", width: 70 },
+                { name: "Video Editing", level: "Intermediate", width: 60 },
                 { name: "Music Production (FL, Protools)", level: "Basic", width: 40 }
             ]
         }
@@ -358,26 +357,26 @@ const educationData = {
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>`,
             title: "Desarrollo Front-End",
-            institution: "Formacion Autodidacta Continua",
-            desc: "HTML, CSS, JavaScript, Node.js, React. En constante actualizacion con tecnologias modernas."
+            institution: "Formación Autodidacta Continua",
+            desc: "HTML, CSS, JavaScript, Node.js, React. En constante actualización con tecnologías modernas."
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line></svg>`,
             title: "Blockchain y Smart Contracts",
             institution: "Solidity, Rust, Web3",
-            desc: "Desarrollo de contratos inteligentes, NFTs, DeFi y analisis de transacciones blockchain."
+            desc: "Desarrollo de contratos inteligentes, NFTs, DeFi y análisis de transacciones blockchain."
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>`,
             title: "Marketing Digital Avanzado",
             institution: "Meta Ads, Google Ads, TikTok",
-            desc: "Campanas Advantage+, estrategias organicas y de pago. Analisis de metricas y optimizacion."
+            desc: "Campañas Advantage+, estrategias orgánicas y de pago. Análisis de métricas y optimización."
         },
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>`,
-            title: "Bachiller Tecnico",
-            institution: "Colegio Ciudad Cordoba",
-            desc: "Graduado con enfasis en areas tecnicas. Base solida en tecnologia y procesos."
+            title: "Bachiller Técnico",
+            institution: "Colegio Ciudad Córdoba",
+            desc: "Graduado con énfasis en áreas técnicas. Base sólida en tecnología y procesos."
         }
     ],
     en: [
@@ -402,7 +401,7 @@ const educationData = {
         {
             icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>`,
             title: "Technical Baccalaureate",
-            institution: "Ciudad Cordoba School",
+            institution: "Ciudad Córdoba School",
             desc: "Graduated with emphasis on technical areas. Solid foundation in technology and processes."
         }
     ]
@@ -410,12 +409,12 @@ const educationData = {
 
 const transitData = {
     es: [
-        { title: "Licencias de Conduccion", desc: "Gestion completa de licencias iniciales y renovaciones. Verificacion en RUNT, remision medica, inscripcion en escuelas y seguimiento hasta la entrega del documento." },
-        { title: "Soluciones Juridicas a Multas", desc: "Analisis de multas, derecho de peticion para multas antiguas, gestion de descuentos por cursos, comparendos en Cali con descuentos del 40-50%. Generacion de paz y salvo." },
-        { title: "Salida de Patios", desc: "Gestion de liberacion vehicular por accidente o comparendo. Tramite de documentos, revision tecnica, certificados de tradicion y verificacion de querellas." },
-        { title: "Traspasos Vehiculares", desc: "Verificacion de derechos, avaluos, impuestos, SOAT y tecnomecanica. Radicacion ante secretaria, traspasos a persona indeterminada, levantamiento de prenda y certificados de chatarrizacion." },
-        { title: "GPS, Tags y Servicios Adicionales", desc: "Implementacion de servicios complementarios con estrategias de venta, marketing y rentabilidad. Expansion de portafolio de servicios para empresas." },
-        { title: "Consultoria Empresarial", desc: "Asesoria para empresas que desean integrar servicios de transito. Desarrollo de estrategias comerciales y operativas para maximizar rentabilidad." }
+        { title: "Licencias de Conducción", desc: "Gestión completa de licencias iniciales y renovaciones. Verificación en RUNT, remisión médica, inscripción en escuelas y seguimiento hasta la entrega del documento." },
+        { title: "Soluciones Jurídicas a Multas", desc: "Análisis de multas, derecho de petición para multas antiguas, gestión de descuentos por cursos, comparendos en Cali con descuentos del 40-50%. Generación de paz y salvo." },
+        { title: "Salida de Patios", desc: "Gestión de liberación vehicular por accidente o comparendo. Trámite de documentos, revisión técnica, certificados de tradición y verificación de querellas." },
+        { title: "Traspasos Vehiculares", desc: "Verificación de derechos, avalúos, impuestos, SOAT y tecnomecánica. Radicación ante secretaría, traspasos a persona indeterminada, levantamiento de prenda y certificados de chatarrización." },
+        { title: "GPS, Tags y Servicios Adicionales", desc: "Implementación de servicios complementarios con estrategias de venta, marketing y rentabilidad. Expansión de portafolio de servicios para empresas." },
+        { title: "Consultoría Empresarial", desc: "Asesoría para empresas que desean integrar servicios de tránsito. Desarrollo de estrategias comerciales y operativas para maximizar rentabilidad." }
     ],
     en: [
         { title: "Driver's Licenses", desc: "Complete management of initial licenses and renewals. RUNT verification, medical referral, school registration and follow-up until document delivery." },
@@ -429,11 +428,11 @@ const transitData = {
 
 const referencesData = {
     es: [
-        { name: "Doris Ortiz", role: "Gerente - Asesoria de Tramites Tránsito El Jardín", phone: "+57 3206095912" },
-        { name: "Jair Nieto", role: "Gerente - Libreria El Cura", phone: "+57 (602) 370 6927" }
+        { name: "Doris Ortiz", role: "Gerente - Asesoría de Trámites Tránsito El Jardín", phone: "+57 3206095912" },
+        { name: "Jair Nieto", role: "Gerente - Librería El Cura", phone: "+57 (602) 370 6927" }
     ],
     en: [
-        { name: "Doris Ortiz", role: "Gerente - Asesoria de Tramites Tránsito El Jardín", phone: "+57 3206095912" },
+        { name: "Doris Ortiz", role: "Manager - Transit Procedures Advisory El Jardín", phone: "+57 3206095912" },
         { name: "Jair Nieto", role: "Manager - El Cura Bookstore", phone: "+57 (602) 370 6927" }
     ]
 };
@@ -536,24 +535,7 @@ document.addEventListener('click', () => {
 // DOWNLOAD PDF FUNCTION
 // ============================================
 downloadBtn.addEventListener('click', () => {
-    // Add print-specific styles temporarily
-    const style = document.createElement('style');
-    style.id = 'print-styles';
-    style.textContent = `
-        @media print {
-            body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Trigger print dialog
     window.print();
-    
-    // Remove temporary styles after a delay
-    setTimeout(() => {
-        const printStyles = document.getElementById('print-styles');
-        if (printStyles) printStyles.remove();
-    }, 1000);
 });
 
 // ============================================
@@ -574,7 +556,6 @@ function renderServices() {
         </article>
     `).join('');
     
-    // Re-apply scroll reveal
     observeElements('.service-card');
 }
 
@@ -770,15 +751,12 @@ document.addEventListener('mousedown', () => document.body.classList.remove('key
 // INITIALIZATION
 // ============================================
 function init() {
-    // Apply saved preferences
     setTheme(currentTheme);
     setLanguage(currentLang);
     
-    // Console message for recruiters
     console.log('%c HANS STEVEN ARANGO ', 'background: #00d4aa; color: #0a0a0f; font-size: 20px; font-weight: bold; padding: 10px;');
     console.log('%c Full Stack Developer & Digital Marketing Specialist ', 'color: #00d4aa; font-size: 14px;');
     console.log('%c +57 312 680 0807 | colombitcoin.co ', 'color: #6b6b7a; font-size: 12px;');
 }
 
-// Run initialization
 init();
