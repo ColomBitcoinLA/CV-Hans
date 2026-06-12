@@ -8,14 +8,30 @@ const translations = {
         language: "Idioma",
         available: "Disponible para nuevos proyectos",
         hero_subtitle: "Estratega Digital & Arquitecto de Soluciones Empresariales, profesional multidisciplinario con experiencia en creación, escalamiento y optimización de empresas mediante branding, marketing digital, desarrollo tecnológico, automatización, data e inteligencia artificial.",
-        stat_years: "Años de Experiencia",
-        stat_projects: "Proyectos Completados",
+        web_note: "Versión web interactiva del CV con proyectos, resultados y portafolio.",
+        target_profile: "Perfil objetivo",
+        role_growth: "Coordinador de Marketing Digital / Growth",
+        role_frontend: "Desarrollador Frontend Junior / Web Developer",
+        role_data: "Analista de Datos Comercial / CRM / Operaciones",
+        role_ai: "Consultor de Automatización e IA para pymes",
+        stat_years: "Años de trayectoria comercial y operativa",
+        stat_projects: "Años en marketing, tecnología y soluciones digitales",
         stat_areas: "Áreas de Especialización",
         stat_sales: "Incremento en Ventas",
-        btn_services: "Ver Servicios",
+        btn_services: "Ver experiencia completa",
+        btn_pdf: "Descargar PDF",
         btn_contact: "Contactar",
         services_title: "Servicios Integrales para Empresas",
         services_desc: "Soluciones completas que transforman tu negocio desde la estrategia hasta la implementación tecnológica.",
+        projects_tag: "Casos de éxito",
+        projects_title: "Proyectos Destacados",
+        projects_desc: "Resultados aplicados en marketing, operaciones, datos y desarrollo web para negocios reales.",
+        project_1_title: "Crecimiento digital B2B/B2C",
+        project_1_desc: "Integración de web, redes, datos comerciales y campañas para multiplicar ventas y ordenar canales digitales.",
+        project_2_title: "Operaciones y cartera",
+        project_2_desc: "Diseño de bases de datos, perfiles de clientes, seguimiento de cobro y reportes para equipos comerciales.",
+        project_3_title: "Presencia web y automatización",
+        project_3_desc: "Landing pages, sitios web y flujos de automatización para captación, atención y gestión de clientes.",
         exp_tag: "Trayectoria",
         exp_title: "Experiencia Profesional",
         exp_desc: "Una década transformando negocios y liderando proyectos innovadores.",
@@ -54,14 +70,30 @@ const translations = {
         language: "Language",
         available: "Available for new projects",
         hero_subtitle: "Digital Strategist & Business Solutions Architect, multidisciplinary professional with experience in creating, scaling and optimizing companies through branding, digital marketing, technological development, automation, data and artificial intelligence.",
-        stat_years: "Years of Experience",
-        stat_projects: "Projects Completed",
+        web_note: "Interactive web CV with projects, results and portfolio.",
+        target_profile: "Target profile",
+        role_growth: "Digital Marketing / Growth Coordinator",
+        role_frontend: "Junior Frontend Developer / Web Developer",
+        role_data: "Commercial Data / CRM / Operations Analyst",
+        role_ai: "Automation and AI Consultant for SMBs",
+        stat_years: "Years in commercial and operational leadership",
+        stat_projects: "Years in marketing, technology and digital solutions",
         stat_areas: "Areas of Expertise",
         stat_sales: "Sales Increase",
-        btn_services: "View Services",
+        btn_services: "View full experience",
+        btn_pdf: "Download PDF",
         btn_contact: "Contact Me",
         services_title: "Comprehensive Business Services",
         services_desc: "Complete solutions that transform your business from strategy to technological implementation.",
+        projects_tag: "Case studies",
+        projects_title: "Featured Projects",
+        projects_desc: "Applied results in marketing, operations, data and web development for real businesses.",
+        project_1_title: "B2B/B2C digital growth",
+        project_1_desc: "Integration of web, social media, commercial data and campaigns to multiply sales and organize digital channels.",
+        project_2_title: "Operations and portfolio",
+        project_2_desc: "Database design, customer profiles, collections tracking and reports for commercial teams.",
+        project_3_title: "Web presence and automation",
+        project_3_desc: "Landing pages, websites and automation flows for lead capture, service and customer management.",
         exp_tag: "Career",
         exp_title: "Professional Experience",
         exp_desc: "A decade transforming businesses and leading innovative projects.",
@@ -449,11 +481,13 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 // ============================================
 const htmlElement = document.documentElement;
 const downloadBtn = document.getElementById('downloadBtn');
+const inlinePrintBtn = document.querySelector('.btn-print-inline');
 const themeBtn = document.getElementById('themeBtn');
 const langBtn = document.getElementById('langBtn');
 const langDropdown = document.getElementById('langDropdown');
 const transitToggle = document.getElementById('transitToggle');
 const transitSection = document.getElementById('transitSection');
+const profilePhoto = document.querySelector('.profile-photo');
 const navDots = document.querySelectorAll('.nav-dot');
 const sections = document.querySelectorAll('section[id], header[id]');
 
@@ -534,9 +568,62 @@ document.addEventListener('click', () => {
 // ============================================
 // DOWNLOAD PDF FUNCTION
 // ============================================
-downloadBtn.addEventListener('click', () => {
+let transitWasOpenBeforePrint = false;
+let printSessionActive = false;
+
+function preparePrintLayout() {
+    if (!printSessionActive) {
+        transitWasOpenBeforePrint = transitSection.classList.contains('open');
+        printSessionActive = true;
+    }
+
+    renderServices();
+    renderExperience();
+    renderSkills();
+    renderEducation();
+    renderTransit();
+    renderReferences();
+
+    document.querySelectorAll('.service-card, .timeline-item, .skill-category, .skill-bar, .edu-card, .transit-card').forEach(el => {
+        el.classList.add('visible');
+    });
+
+    transitSection.classList.add('open');
+    transitToggle.classList.add('open');
+    transitToggle.setAttribute('aria-expanded', 'true');
+}
+
+function restoreAfterPrint() {
+    if (!transitWasOpenBeforePrint) {
+        transitSection.classList.remove('open');
+        transitToggle.classList.remove('open');
+        transitToggle.setAttribute('aria-expanded', 'false');
+        transitToggle.querySelector('span').textContent = translations[currentLang].transit_toggle;
+    }
+    printSessionActive = false;
+}
+
+function printCv() {
+    preparePrintLayout();
     window.print();
-});
+}
+
+downloadBtn.addEventListener('click', printCv);
+if (inlinePrintBtn) inlinePrintBtn.addEventListener('click', printCv);
+window.addEventListener('beforeprint', preparePrintLayout);
+window.addEventListener('afterprint', restoreAfterPrint);
+
+if (profilePhoto) {
+    profilePhoto.addEventListener('error', () => {
+        profilePhoto.classList.add('is-missing');
+        profilePhoto.setAttribute('aria-hidden', 'true');
+    });
+
+    if (profilePhoto.complete && profilePhoto.naturalWidth === 0) {
+        profilePhoto.classList.add('is-missing');
+        profilePhoto.setAttribute('aria-hidden', 'true');
+    }
+}
 
 // ============================================
 // RENDER FUNCTIONS

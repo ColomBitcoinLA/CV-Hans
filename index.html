@@ -72,6 +72,7 @@
         <nav class="nav-float" aria-label="Navegación de secciones">
             <button class="nav-dot active" data-section="hero" aria-label="Ir a inicio"></button>
             <button class="nav-dot" data-section="services" aria-label="Ir a servicios"></button>
+            <button class="nav-dot" data-section="projects" aria-label="Ir a proyectos"></button>
             <button class="nav-dot" data-section="experience" aria-label="Ir a experiencia"></button>
             <button class="nav-dot" data-section="skills" aria-label="Ir a habilidades"></button>
             <button class="nav-dot" data-section="contact" aria-label="Ir a contacto"></button>
@@ -80,21 +81,60 @@
         <!-- Hero Section -->
         <header id="hero" class="hero">
             <div class="hero-content">
-                <div class="hero-badge" data-i18n="available">Disponible para nuevos proyectos</div>
-                <h1 class="hero-title">
-                    Hans Steven <span>Arango Ortiz</span>
-                </h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">
-                    Estratega Digital & Arquitecto de Soluciones Empresariales, profesional multidisciplinario con experiencia en creación, escalamiento y optimización de empresas mediante branding, marketing digital, desarrollo tecnológico, automatización, data e inteligencia artificial..
-                </p>
+                <div class="hero-main">
+                    <div class="hero-copy">
+                        <div class="hero-badge" data-i18n="available">Disponible para nuevos proyectos</div>
+                        <h1 class="hero-title">
+                            Hans Steven <span>Arango Ortiz</span>
+                        </h1>
+                        <p class="hero-subtitle" data-i18n="hero_subtitle">
+                            Estratega Digital & Arquitecto de Soluciones Empresariales, profesional multidisciplinario con experiencia en creación, escalamiento y optimización de empresas mediante branding, marketing digital, desarrollo tecnológico, automatización, data e inteligencia artificial.
+                        </p>
+                        <p class="hero-web-note" data-i18n="web_note">Versión web interactiva del CV con proyectos, resultados y portafolio.</p>
+                        <div class="hero-links" aria-label="Enlaces profesionales">
+                            <a href="https://colombitcoin.co" target="_blank" rel="noopener noreferrer">Portafolio web</a>
+                            <a href="https://github.com/ColomBitcoinLA" target="_blank" rel="noopener noreferrer" class="editable-link">GitHub</a>
+                            <a href="mailto:colombitcoinla@gmail.com">Contacto</a>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#experience" class="btn-primary" data-i18n="btn_services">
+                                Ver experiencia completa
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <button class="btn-secondary btn-print-inline" type="button" data-i18n="btn_pdf">Descargar PDF</button>
+                            <a href="#contact" class="btn-secondary" data-i18n="btn_contact">Contactar</a>
+                        </div>
+                    </div>
+
+                    <aside class="hero-profile" aria-label="Perfil profesional">
+                        <figure class="profile-photo-frame">
+                            <span class="profile-photo-fallback" aria-hidden="true">HS</span>
+                            <img class="profile-photo" src="./assets/profile/hans2.jpg" alt="Foto profesional de Hans Steven Arango Ortiz">
+                        </figure>
+                        <div class="profile-card">
+                            <p class="profile-kicker" data-i18n="target_profile">Perfil objetivo</p>
+                            <ul class="role-list">
+                                <li data-i18n="role_growth">Coordinador de Marketing Digital / Growth</li>
+                                <li data-i18n="role_frontend">Desarrollador Frontend Junior / Web Developer</li>
+                                <li data-i18n="role_data">Analista de Datos Comercial / CRM / Operaciones</li>
+                                <li data-i18n="role_ai">Consultor de Automatización e IA para pymes</li>
+                            </ul>
+                        </div>
+                        <div class="print-web-link">Web: colombitcoin.co</div>
+                    </aside>
+                </div>
+
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label" data-i18n="stat_years">Años de Experiencia</div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label" data-i18n="stat_years">Años de trayectoria comercial y operativa</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label" data-i18n="stat_projects">Proyectos Completados</div>
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label" data-i18n="stat_projects">Años en marketing, tecnología y soluciones digitales</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">8</div>
@@ -104,16 +144,6 @@
                         <div class="stat-number">+3x</div>
                         <div class="stat-label" data-i18n="stat_sales">Incremento en Ventas</div>
                     </div>
-                </div>
-                <div class="hero-cta">
-                    <a href="#services" class="btn-primary" data-i18n="btn_services">
-                        Ver Servicios
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                    <a href="#contact" class="btn-secondary" data-i18n="btn_contact">Contactar</a>
                 </div>
                 <div class="scroll-indicator">
                     <span>Scroll</span>
@@ -133,6 +163,32 @@
             </div>
             <div class="services-grid" id="servicesGrid">
                 <!-- Services will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="projects_tag">Casos de éxito</span>
+                <h2 class="section-title" data-i18n="projects_title">Proyectos Destacados</h2>
+                <p class="section-desc" data-i18n="projects_desc">Resultados aplicados en marketing, operaciones, datos y desarrollo web para negocios reales.</p>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <span class="project-metric">+4x</span>
+                    <h3 data-i18n="project_1_title">Crecimiento digital B2B/B2C</h3>
+                    <p data-i18n="project_1_desc">Integración de web, redes, datos comerciales y campañas para multiplicar ventas y ordenar canales digitales.</p>
+                </article>
+                <article class="project-card">
+                    <span class="project-metric">CRM</span>
+                    <h3 data-i18n="project_2_title">Operaciones y cartera</h3>
+                    <p data-i18n="project_2_desc">Diseño de bases de datos, perfiles de clientes, seguimiento de cobro y reportes para equipos comerciales.</p>
+                </article>
+                <article class="project-card">
+                    <span class="project-metric">Web</span>
+                    <h3 data-i18n="project_3_title">Presencia web y automatización</h3>
+                    <p data-i18n="project_3_desc">Landing pages, sitios web y flujos de automatización para captación, atención y gestión de clientes.</p>
+                </article>
             </div>
         </section>
 
@@ -163,7 +219,7 @@
         </section>
 
         <!-- Education Section -->
-        <section class="section">
+        <section id="education" class="section">
             <div class="section-header">
                 <span class="section-tag" data-i18n="edu_tag">Formación</span>
                 <h2 class="section-title" data-i18n="edu_title">Educación y Certificaciones</h2>
