@@ -1149,45 +1149,222 @@ h1, h2, h3, h4, h5, h6 {
    PRINT STYLES (PDF OPTIMIZATION)
    ================================== */
 @media print {
-    /* Reset backgrounds and colors for perfect white PDF */
-    * {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    body {
-        background: #fff !important;
-        margin: 0;
-        padding: 0;
-    }
-
     @page {
         size: A4;
-        margin: 15mm;
+        margin: 12mm;
     }
 
-    /* Hide interactive elements */
+    :root,
+    [data-theme="light"] {
+        --bg: #fff;
+        --bg-elevated: #fff;
+        --fg: #121826;
+        --muted: #4b5563;
+        --accent: #0f766e;
+        --accent-dim: #f3f4f6;
+        --card: #fff;
+        --border: #d1d5db;
+        --gradient-1: #0f766e;
+        --gradient-2: #0f766e;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        color: #121826 !important;
+        filter: none !important;
+        text-shadow: none !important;
+        transition: none !important;
+    }
+
+    html,
+    body {
+        background: #fff !important;
+        color: #121826 !important;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.35;
+        margin: 0;
+        overflow: visible !important;
+        padding: 0;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #111827 !important;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0;
+        page-break-after: avoid;
+    }
+
+    p,
+    li,
+    span,
+    a,
+    div {
+        orphans: 3;
+        widows: 3;
+    }
+
     .control-panel,
     .nav-float,
     .bg-grid,
     .bg-glow,
-    .transit-toggle,
     .hero-cta,
     .scroll-indicator,
     .lang-dropdown,
-    .control-tooltip {
+    .control-tooltip,
+    .transit-toggle {
         display: none !important;
     }
 
-    /* Show all content */
-    .transit-section {
-        max-height: none !important;
-        overflow: visible !important;
+    .hero,
+    .section,
+    .contact-section,
+    .footer {
+        border: 0 !important;
+        display: block !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        position: static !important;
+        z-index: auto !important;
     }
 
-    /* Card styling for readability */
+    .hero {
+        border-bottom: 1px solid #cbd5e1 !important;
+        margin-bottom: 7mm;
+        padding-bottom: 5mm !important;
+    }
+
+    .hero-content,
+    .skills-container,
+    .timeline,
+    .services-grid,
+    .education-grid,
+    .transit-grid,
+    .contact-grid,
+    #referencesGrid {
+        max-width: none !important;
+        width: 100% !important;
+    }
+
+    .hero-badge {
+        border: 1px solid #9ca3af !important;
+        border-radius: 999px;
+        display: inline-block;
+        font-size: 7.5pt;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        margin: 0 0 3mm;
+        padding: 1.5mm 3mm;
+        text-transform: uppercase;
+    }
+
+    .hero-badge::before {
+        display: none !important;
+    }
+
+    .hero-title {
+        font-size: 25pt;
+        line-height: 1.05;
+        margin: 0 0 3mm;
+    }
+
+    .hero-title span {
+        background: none !important;
+        color: #0f766e !important;
+        -webkit-text-fill-color: #0f766e !important;
+    }
+
+    .hero-subtitle {
+        color: #374151 !important;
+        font-size: 10pt;
+        margin: 0 0 5mm;
+        max-width: 180mm;
+    }
+
+    .hero-stats {
+        display: grid !important;
+        gap: 2.5mm !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        margin: 0 !important;
+    }
+
+    .stat-item {
+        padding: 3mm !important;
+        text-align: left;
+    }
+
+    .stat-number {
+        color: #0f766e !important;
+        font-size: 17pt;
+        line-height: 1;
+        margin-bottom: 1mm;
+    }
+
+    .stat-label {
+        color: #4b5563 !important;
+        font-size: 7.5pt;
+        line-height: 1.2;
+    }
+
+    .section {
+        margin: 0 0 6mm !important;
+    }
+
+    .section-header {
+        margin: 0 0 3.5mm !important;
+        text-align: left !important;
+    }
+
+    .section-tag {
+        border: 0 !important;
+        color: #0f766e !important;
+        display: block;
+        font-size: 7pt;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        margin: 0 0 1mm !important;
+        padding: 0 !important;
+        text-transform: uppercase;
+    }
+
+    .section-title {
+        border-bottom: 1px solid #cbd5e1;
+        font-size: 15pt;
+        line-height: 1.1;
+        margin: 0 0 2mm;
+        padding-bottom: 1.5mm;
+    }
+
+    .section-desc {
+        color: #4b5563 !important;
+        font-size: 8.8pt;
+        margin: 0 !important;
+        max-width: none;
+    }
+
+    .services-grid,
+    .skills-grid,
+    .education-grid,
+    .transit-grid,
+    .contact-grid,
+    #referencesGrid {
+        display: grid !important;
+        gap: 3mm !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        margin: 0 !important;
+    }
+
     .service-card,
     .timeline-content,
     .skill-category,
@@ -1196,97 +1373,211 @@ h1, h2, h3, h4, h5, h6 {
     .stat-item,
     .transit-card,
     .reference-card {
-        border: 1px solid #ccc !important;
         background: #fff !important;
+        border: 1px solid #d1d5db !important;
+        border-radius: 5px !important;
         break-inside: avoid;
+        page-break-inside: avoid;
     }
 
-    /* Fix gradient text */
-    .hero-title span {
-        background: none !important;
-        -webkit-text-fill-color: #000 !important;
-        color: #000 !important;
-    }
-
-    .hero-badge {
-        border: 1px solid #000 !important;
-        color: #000 !important;
-    }
-
-    .hero-badge::before {
-        background: #000 !important;
-    }
-
-    .stat-number {
-        color: #000 !important;
-    }
-
-    .section-tag {
-        background: #eee !important;
-        color: #000 !important;
+    .service-card,
+    .skill-category,
+    .edu-card,
+    .transit-card,
+    .reference-card {
+        padding: 3.5mm !important;
     }
 
     .service-icon,
     .edu-icon,
     .contact-icon {
-        background: #eee !important;
+        display: none !important;
     }
 
-    .service-icon svg,
-    .edu-icon svg,
-    .contact-icon svg {
-        stroke: #000 !important;
+    .service-title,
+    .timeline-title,
+    .skill-category-title,
+    .edu-title,
+    .transit-card-title,
+    .reference-name {
+        font-size: 10pt;
+        line-height: 1.2;
+        margin: 0 0 1.5mm !important;
     }
 
-    .skill-bar-fill {
-        background: #000 !important;
+    .service-desc,
+    .timeline-desc,
+    .edu-desc,
+    .transit-card-desc,
+    .reference-role,
+    .reference-phone {
+        color: #4b5563 !important;
+        font-size: 8pt;
+        line-height: 1.32;
+        margin: 0 !important;
+    }
+
+    .service-tags {
+        gap: 1.5mm;
+        margin-top: 2mm;
+    }
+
+    .service-tag,
+    .lang-tag,
+    .timeline-date {
+        border: 1px solid #d1d5db !important;
+        border-radius: 999px !important;
+        color: #374151 !important;
+        display: inline-block;
+        font-size: 7pt !important;
+        font-weight: 600;
+        line-height: 1.1;
+        padding: 1mm 2mm !important;
+    }
+
+    .timeline {
+        display: grid;
+        gap: 3mm;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .timeline::before,
+    .timeline-dot {
+        display: none !important;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    .timeline-content {
+        padding: 3.5mm !important;
+    }
+
+    .timeline-company,
+    .edu-institution {
+        color: #0f766e !important;
+        font-size: 8pt;
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0 0 1.5mm !important;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .skill-category-title {
+        align-items: flex-start;
+        display: block !important;
+    }
+
+    .skill-category-title::before {
+        display: none !important;
+    }
+
+    .skill-bars {
+        gap: 2mm;
+    }
+
+    .skill-bar-header {
+        gap: 2mm;
+        margin-bottom: 0.8mm;
+    }
+
+    .skill-bar-name,
+    .skill-bar-level {
+        font-size: 7.5pt;
+    }
+
+    .skill-bar-level {
+        color: #0f766e !important;
+        font-weight: 700;
     }
 
     .skill-bar-track {
-        background: #eee !important;
+        background: #e5e7eb !important;
+        border-radius: 999px;
+        height: 3pt;
     }
 
-    .timeline-date {
-        background: #eee !important;
-        color: #000 !important;
+    .skill-bar-fill {
+        background: #0f766e !important;
+        border-radius: 999px;
+        transform: none !important;
     }
 
-    .timeline-dot {
-        border-color: #000 !important;
-        background: #fff !important;
+    .edu-card,
+    .contact-item {
+        display: block !important;
     }
 
-    .timeline::before {
-        background: #ccc !important;
+    .lang-tags {
+        justify-content: flex-start;
+        margin: 0 !important;
     }
 
-    .lang-tag {
-        border: 1px solid #ccc !important;
-        background: #fff !important;
+    .transit-section {
+        max-height: none !important;
+        overflow: visible !important;
     }
 
-    .btn-primary,
-    .btn-secondary {
-        display: none;
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
 
-    /* Font sizing for print */
-    body {
-        font-size: 11pt;
-        line-height: 1.4;
+    .contact-item {
+        padding: 3mm !important;
+        text-decoration: none !important;
     }
 
-    .hero-title {
-        font-size: 24pt;
+    .contact-label {
+        color: #6b7280 !important;
+        font-size: 7pt;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-bottom: 1mm;
+        text-transform: uppercase;
     }
 
-    .section-title {
-        font-size: 18pt;
+    .contact-value {
+        color: #111827 !important;
+        font-size: 8.5pt;
+        font-weight: 600;
+        word-break: break-word;
     }
 
-    /* Remove animations */
-    * {
-        animation: none !important;
-        transition: none !important;
+    .footer {
+        border-top: 1px solid #cbd5e1 !important;
+        color: #4b5563 !important;
+        font-size: 7.5pt;
+        margin-top: 5mm;
+        padding-top: 3mm !important;
+        text-align: center;
+    }
+
+    .footer p {
+        margin: 0 0 1mm !important;
+    }
+
+    .service-card,
+    .timeline-item,
+    .skill-category,
+    .skill-bar,
+    .edu-card,
+    .transit-card,
+    .hero-badge,
+    .hero-title,
+    .hero-subtitle,
+    .hero-stats {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    a[href]::after {
+        content: "";
     }
 }
