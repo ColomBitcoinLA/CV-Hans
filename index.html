@@ -19,14 +19,17 @@
         <!-- Control Panel -->
         <div class="control-panel" role="toolbar" aria-label="Controles del CV">
             <!-- Download PDF -->
-            <button class="control-btn" id="downloadBtn" aria-label="Descargar CV en PDF">
+            <a class="control-btn" id="downloadBtn"
+               href="./assets/cv/hans-steven-arango-cv.pdf?v=2026-01"
+               download="Hans Steven Arango Ortiz - CV Profesional 2026.pdf"
+               aria-label="Descargar CV en PDF">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
                 <span class="control-tooltip" data-i18n="download">Descargar PDF</span>
-            </button>
+            </a>
 
             <!-- Theme Toggle -->
             <button class="control-btn" id="themeBtn" aria-label="Cambiar tema">
@@ -104,7 +107,10 @@
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
                             </a>
-                            <button class="btn-secondary btn-print-inline" type="button" data-i18n="btn_pdf">Descargar PDF</button>
+                            <a class="btn-secondary btn-print-inline"
+                               href="./assets/cv/hans-steven-arango-cv.pdf?v=2026-01"
+                               download="Hans Steven Arango Ortiz - CV Profesional 2026.pdf"
+                               data-i18n="btn_pdf">Descargar PDF</a>
                             <a href="#contact" class="btn-secondary" data-i18n="btn_contact">Contactar</a>
                         </div>
                     </div>

@@ -480,8 +480,6 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 // DOM ELEMENTS
 // ============================================
 const htmlElement = document.documentElement;
-const downloadBtn = document.getElementById('downloadBtn');
-const inlinePrintBtn = document.querySelector('.btn-print-inline');
 const themeBtn = document.getElementById('themeBtn');
 const langBtn = document.getElementById('langBtn');
 const langDropdown = document.getElementById('langDropdown');
@@ -608,8 +606,9 @@ function printCv() {
     window.print();
 }
 
-downloadBtn.addEventListener('click', printCv);
-if (inlinePrintBtn) inlinePrintBtn.addEventListener('click', printCv);
+// La descarga del CV es ahora un enlace directo al PDF generado
+// (ver print/build_cv_pdf.py), así el archivo llega sin los encabezados y
+// pies que agrega el navegador al imprimir. Ctrl+P sigue funcionando.
 window.addEventListener('beforeprint', preparePrintLayout);
 window.addEventListener('afterprint', restoreAfterPrint);
 
