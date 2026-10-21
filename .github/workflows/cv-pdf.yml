@@ -1,0 +1,75 @@
+name: Regenerar CV en PDF
+
+# Se ejecuta cuando cambia algo dentro de print/ (textos, estilos, foto, QR,
+# fuentes o el propio script). También se puede lanzar a mano desde Actions.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "print/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cv-pdf
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install pypdf pypdfium2 pillow
+
+      - name: Instalar Chrome
+        id: chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: Generar PDF y versionar la descarga
+        env:
+          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
+        run: python print/build_cv_pdf.py
+
+      - name: Guardar vistas previas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-preview
+          path: print/preview/*.png
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Detectar cambios
+        id: diff
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Sin cambios en el PDF."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git status --short
+          fi
+
+      - name: Commit y push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/cv index.html print/preview
+          git commit -m "chore: regenerar CV PDF y actualizar version de descarga [skip ci]"
+          git push
