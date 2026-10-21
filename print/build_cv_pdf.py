@@ -107,6 +107,10 @@ def add_metadata(draft: str) -> None:
         writer.add_page(page)
     meta = dict(reader.metadata or {})
     meta.update(META)
+    # sin fechas: así el mismo contenido genera exactamente el mismo archivo
+    # (evita commits del bot cuando solo cambiaría la fecha de generación)
+    meta.pop("/CreationDate", None)
+    meta.pop("/ModDate", None)
     writer.add_metadata(meta)
     with open(FINAL, "wb") as f:
         writer.write(f)
@@ -115,16 +119,19 @@ def add_metadata(draft: str) -> None:
 def sources_digest() -> str:
     """Hash de las fuentes del PDF: cambia solo si cambia el contenido."""
     digest = hashlib.sha256()
+    def feed(path):
+        with open(path, "rb") as handle:
+            # normaliza CRLF/LF: el hash no debe depender del sistema operativo
+            digest.update(handle.read().replace(b"\r\n", b"\n"))
+
     for path in (HTML, CSS, FONTS_CSS, PHOTO, QR):
-        with open(path, "rb") as f:
-            digest.update(os.path.basename(path).encode())
-            digest.update(f.read())
+        digest.update(os.path.basename(path).encode())
+        feed(path)
     for name in sorted(os.listdir(FONT_DIR)):
         path = os.path.join(FONT_DIR, name)
         if os.path.isfile(path):
             digest.update(name.encode())
-            with open(path, "rb") as f:
-                digest.update(f.read())
+            feed(path)
     return digest.hexdigest()[:8]
 
 
